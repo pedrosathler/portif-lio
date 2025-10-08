@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="top">
+      <a href="#primeiro">Inicio</a>
+      <a href="#segundo">Produtos</a>
+      <a href="#terceiro">Contato</a>
+    </div>
+
+    <div id="tudo">
+      <div id="primeiro" class="sesao">
+        <h2 class="h2">Inicio</h2>
+        <img src="jj.png" />
+        <h1>Desenvolvedor De Sistemas</h1>
+        <p>Conteudo da seção 1</p>
+        <button id="btn1">Ver Projetos</button>
+      </div>
+
+
+
+
+
+      
+      <div id="segundo" class="sesao">
+        <h2>Produtos</h2>
+        <p>Conteudo da seção 2</p>
+        <div class="grande">
+          <div class="card card1">
+            <h1 class="texto2">🌐Portifolio Pessoal</h1>
+            <p class="texto">
+              Meu site com apresentação profissioonal com informações e
+              projetos
+            </p>
+            <button class="buttons">Ver Projeto</button>
+          </div>
+          <div class="card card2">
+            <h1 class="texto2">🛒Loja Virtual</h1>
+            <p class="texto">
+              Prototipo de e-commerce com carrinhos de compras em JavaScript
+            </p>
+            <button class="buttons">Ver Projeto</button>
+          </div>
+          <div class="card card3">
+            <h1 class="texto2">📊Dashboard de Dados</h1>
+            <p class="texto">
+              Painel interativo para visualização<br />
+              de métricas e dados
+            </p>
+            <button class="buttons">Ver Projeto</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      
+      <div id="terceiro" class="sesao">
+        <h2 class="h2">Contato</h2>
+        <p>Entre em contato comigo pelo WhatsApp preenchendo o formulário abaixo:</p>
+
+        <div class="conteiner">
+          <form id="whatsappForm">
+            <input type="text" placeholder="Seu Nome" id="seunome" required /> <br /><br />
+            <input type="email" placeholder="Seu email" id="seuemail" required /> <br /><br />
+            <textarea id="mensagem" placeholder="Digite Sua Mensagem" required></textarea><br /><br />
+            <button type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <script>
+      document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const nome = document.getElementById("seunome").value;
+        const email = document.getElementById("seuemail").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        const texto = `Olá, meu nome é ${nome} (${email}) e gostaria de falar: ${mensagem}`;
+        const url = `https://wa.me/5527995751813?text=${encodeURIComponent(texto)}`;
+
+        window.open(url, "_blank");
+      });
+    </script>
+  </body>
+</html>
+jkh.bk.
